@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1° Cuatrimestre 2025 | Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="title-1">Contacto</h1>
+      <nav>
+        <ul class="nav-ul">
+          <li>
+            <a href="index.html" class="nav-li">Home</a>
+          </li>
+          <li>
+            <a href="avisos.html" class="nav-li">Avisos</a>
+          </li>
+          <li>
+            <a href="sobre-mi.html" class="nav-li">Sobre mí</a>
+          </li>
+          <li>
+            <a href="materias-2025.html" class="nav-li">Materias</a>
+          </li>
+          <li class="nav-li-current">Contacto</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="p-4 sm:p-16">
+      <div class="flex flex-col md:flex-row gap-16 mt-4">
+        <div class="md:w-[40vw]">
+          <h2 class="title-2">Formulario de Contacto</h2>
+          <div class="space-y-4 mt-8">
+            <div class="flex items-center">
+              <i
+                class="fa-solid fa-envelope text-primary text-xl sm:text-2xl mr-3"
+              ></i>
+              <p>bdeamorrortu@uade.edu.ar</p>
+            </div>
+            <div class="flex items-center">
+              <i
+                class="fa-solid fa-clock text-primary text-xl sm:text-2xl mr-3"
+              ></i>
+              <p>Disponible: Lunes a Viernes 18:00hs - 22:00hs</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-[45vw]">
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="first-name" class="input-label">Nombre:</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Nombre"
+                  class="input"
+                />
+              </div>
+
+              <div>
+                <label for="last-name" class="input-label">Apellido:</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Apellido"
+                  class="input"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="email" class="input-label">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                class="input"
+              />
+            </div>
+            <div>
+              <label for="subject" class="input-label">Asunto:</label>
+              <input
+                type="subject"
+                id="subject"
+                name="subject"
+                placeholder="Asunto"
+                class="input"
+              />
+            </div>
+            <div>
+              <label for="message" class="input-label">Mensaje:</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Escribe tu mensaje aquí..."
+                class="input resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-primary text-white py-2 rounded-md hover:bg-accent transition-colors w-auto mt-2 text-sm"
+            >
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <i class="fa-solid fa-user"></i>
+        <p class="font-semibold">Belén de Amorrortu</p>
+        <p>Estudiante</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <p class="font-semibold">Diseño y Desarrollo Web</p>
+        <p>UADE</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-id-card"></i>
+        <p class="font-semibold">Legajo</p>
+        <p>12345678</p>
+      </div>
+    </footer>
+  </body>
+</html>

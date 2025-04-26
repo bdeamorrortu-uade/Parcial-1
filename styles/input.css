@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-background: #faf8f5;
+  --color-text: #2d2a2e;
+  --color-primary: #832d67;
+  --color-secondary: #d4c1d7;
+  --color-lilac: #f0e8f1;
+  --color-accent: #c7b3c9;
+
+  --font-noto: "Noto Sans", sans-serif;
+
+  --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  @apply bg-background text-text font-noto;
+}
+
+header {
+  @apply h-[40vh] bg-[url('../img/background.jpg')] bg-cover bg-center flex flex-col items-center justify-center text-background relative;
+}
+
+nav {
+  @apply fixed top-6 right-6 z-50;
+}
+
+.nav-ul {
+  @apply bg-lilac rounded-full flex gap-4 px-6 py-2 text-text shadow-md text-sm font-medium;
+}
+
+.nav-li {
+  @apply hover:text-primary transition text-base;
+}
+
+.nav-li-current {
+  @apply text-primary font-semibold text-base;
+}
+
+footer {
+  @apply bg-lilac mt-20 py-12 px-6 sm:px-16 text-text text-center grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm;
+}
+
+footer div {
+  @apply flex flex-col items-center gap-1;
+}
+
+footer i {
+  @apply text-primary text-2xl;
+}
+
+.title-1 {
+  @apply text-5xl font-extrabold drop-shadow-lg;
+}
+
+.title-2 {
+  @apply text-3xl font-semibold mb-8 border-b border-secondary pb-2;
+}
+
+.card {
+  @apply p-4 bg-white rounded-md shadow-soft hover:bg-lilac transition-colors flex items-center;
+}
+
+.input-label {
+  @apply font-medium block mb-1 text-sm;
+}
+
+.input {
+  @apply w-full p-2 bg-transparent border-b-2 border-secondary focus:outline-none focus:border-primary transition-colors placeholder:text-text placeholder:opacity-60;
+}
+
+.projects-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4;
+}
+
+.project-card {
+  @apply relative overflow-hidden rounded-lg h-[200px] bg-cover bg-center shadow-lg;
+}
+
+.project-card::before {
+  @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/20 transition-all duration-300;
+}
+
+.project-card:hover::before {
+  @apply bg-black/70;
+}
+
+.project-card .card-content {
+  @apply absolute -bottom-10 left-0 w-full p-6 transition-all duration-300  bg-gradient-to-t from-primary from-40% to-transparent;
+}
+
+.project-card:hover .card-content {
+  @apply bottom-0;
+}
+
+.project-1 {
+  @apply bg-[url("../img/UVA1-1.png")];
+}
+.project-2 {
+  @apply bg-[url("../img/UVA1-2.png")];
+}
+.project-3 {
+  @apply bg-[url("../img/UVA1-3.png")];
+}
+.project-4 {
+  @apply bg-[url("../img/UVA2-1.png")];
+}
+.project-5 {
+  @apply bg-[url("../img/UVA2-2.png")];
+}
+.project-6 {
+  @apply bg-[url("../img/UVA2-3.png")];
+}
+.project-7 {
+  @apply bg-[url("../img/UVA2-4.png")];
+}

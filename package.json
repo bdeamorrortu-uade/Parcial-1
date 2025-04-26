@@ -1,0 +1,12 @@
+{
+  "name": "integrador-parcial-1",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./styles/input.css -o ./dist/output.css --minify",
+    "dev": "npx @tailwindcss/cli -i ./styles/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
+}
