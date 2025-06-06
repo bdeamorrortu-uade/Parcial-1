@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="js/contact.js"></script>
   </head>
   <body>
     <header>
@@ -58,7 +59,11 @@
           </div>
         </div>
         <div class="md:w-[45vw]">
-          <form class="space-y-4">
+          <form
+            id="contact-form"
+            class="space-y-4"
+            onsubmit="validateForm(event)"
+          >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label for="first-name" class="input-label">Nombre:</label>
@@ -85,7 +90,6 @@
             <div>
               <label for="email" class="input-label">Email:</label>
               <input
-                type="email"
                 id="email"
                 name="email"
                 placeholder="Email"
@@ -95,7 +99,7 @@
             <div>
               <label for="subject" class="input-label">Asunto:</label>
               <input
-                type="subject"
+                type="text"
                 id="subject"
                 name="subject"
                 placeholder="Asunto"
@@ -109,15 +113,30 @@
                 name="message"
                 placeholder="Escribe tu mensaje aquí..."
                 class="input resize-none"
+                rows="4"
               ></textarea>
             </div>
             <button
               type="submit"
-              class="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary transition-colors cursor-pointer mt-2 text-sm"
+              id="submit-btn"
+              class="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary transition-colors cursor-pointer mt-2 text-sm font-medium"
             >
               Enviar mensaje
             </button>
           </form>
+          <div id="response-modal" class="hidden form-response-modal">
+            <div class="modal-content">
+              <i id="modal-icon"></i>
+              <div id="modal-message"></div>
+              <button
+                id="close-modal-btn"
+                onclick="closeModal()"
+                class="bg-primary text-white px-6 py-2 rounded-md hover:bg-secondary transition-colors cursor-pointer mt-2 text-sm font-medium"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

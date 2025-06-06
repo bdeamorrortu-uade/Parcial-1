@@ -73,6 +73,34 @@ footer i {
   @apply w-full p-2 bg-transparent border-b-2 border-secondary focus:outline-none focus:border-primary transition-colors placeholder:text-text placeholder:opacity-60;
 }
 
+.form-response-modal {
+  @apply fixed top-0 left-0 w-full h-full items-center justify-center z-100 bg-black/50 backdrop-blur-xs;
+}
+
+.modal-content {
+  @apply w-full max-w-lg bg-white rounded-lg p-10 text-center flex flex-col gap-6;
+}
+
+.modal-content .error-icon {
+  @apply text-red-500 text-4xl;
+}
+
+.modal-content .success-icon {
+  @apply text-green-500 text-4xl;
+}
+
+.modal-content h6 {
+  @apply text-text font-semibold text-lg mb-4;
+}
+
+.modal-content ul {
+  @apply text-left m-2;
+}
+
+.modal-content li {
+  @apply my-1 list-disc list-inside;
+}
+
 .projects-container {
   @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4;
 }
