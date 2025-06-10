@@ -173,3 +173,111 @@ footer i {
 .project-7 {
   @apply bg-[url("../img/UVA2-4.png")];
 }
+
+.table-container {
+  @apply overflow-x-auto rounded-md;
+}
+
+.table {
+  @apply min-w-full border-collapse text-sm;
+}
+
+.table-header {
+  @apply bg-primary text-white text-left;
+}
+
+.table-header-cell {
+  @apply p-3;
+}
+
+.table-header-cell:first-child {
+  @apply rounded-tl-md;
+}
+
+.table-header-cell:last-child {
+  @apply rounded-tr-md;
+}
+
+.table-row {
+  @apply bg-lilac dark:bg-dark-lilac border-b border-secondary dark:border-dark-secondary;
+}
+
+.table-row:last-child {
+  @apply border-b-0;
+}
+
+.table-cell {
+  @apply p-3 text-text dark:text-dark-text;
+}
+
+.table-cell:first-child {
+  @apply font-medium;
+}
+
+.table-row:last-child .table-cell:first-child {
+  @apply rounded-bl-md;
+}
+
+.table-row:last-child .table-cell:last-child {
+  @apply rounded-br-md;
+}
+
+.contact-container {
+  @apply flex flex-col md:flex-row gap-16 mt-4;
+}
+
+.contact-info {
+  @apply md:w-[40vw];
+}
+
+.contact-form-container {
+  @apply md:w-[45vw];
+}
+
+.contact-info-item {
+  @apply flex items-center;
+}
+
+.contact-info-icon {
+  @apply text-primary dark:text-dark-primary text-xl sm:text-2xl mr-3;
+}
+
+.contact-form {
+  @apply space-y-4;
+}
+
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.submit-button {
+  @apply w-full bg-primary dark:bg-dark-primary text-white py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
+}
+
+.modal-button {
+  @apply bg-primary dark:bg-dark-primary text-white px-6 py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
+}
+
+.tasks-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8;
+}
+
+.task-card {
+  @apply bg-lilac dark:bg-dark-lilac rounded-md overflow-hidden;
+}
+
+.task-header {
+  @apply text-lg font-bold bg-primary dark:bg-dark-primary p-3 w-full text-center text-white;
+}
+
+.task-list {
+  @apply p-6 flex flex-col gap-3 min-h-[120px];
+}
+
+.task-item {
+  @apply p-4 bg-card-bg dark:bg-transparent dark:border dark:border-dark-secondary rounded-md shadow-soft hover:bg-lilac dark:hover:bg-dark-lilac transition-colors flex items-center;
+}
+
+.no-tasks {
+  @apply text-center text-text dark:text-dark-text;
+}
