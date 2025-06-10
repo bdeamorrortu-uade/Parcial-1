@@ -7,38 +7,69 @@
   --color-primary: #832d67;
   --color-secondary: #ae85b0;
   --color-lilac: #f0e8f1;
+  --color-card-bg: #ffffff;
 
-  --font-noto: "Noto Sans", sans-serif;
+  --color-dark-background: #1a1625;
+  --color-dark-text: #e8e3f0;
+  --color-dark-primary: #b857a4;
+  --color-dark-secondary: #8a6b8d;
+  --color-dark-lilac: #2d2438;
+  --color-dark-card-bg: #25213a;
 
   --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-soft-dark: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  --font-noto: "Noto Sans", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  @apply transition-colors duration-300;
 }
 
 body {
-  @apply bg-background text-text font-noto;
+  @apply bg-background dark:bg-dark-background text-text dark:text-dark-text font-noto;
 }
 
 header {
   @apply h-[40vh] bg-[url('../img/background.jpg')] bg-cover bg-center flex flex-col items-center justify-center text-background relative;
 }
 
+header::after {
+  @apply content-[""] absolute top-0 left-0 right-0 bottom-0 bg-black/0 dark:bg-black/40 pointer-events-none transition-all duration-300;
+}
+
+header > * {
+  @apply relative z-10;
+}
+
 nav {
-  @apply fixed top-2 sm:top-6 sm:right-6 z-50 w-[98%] sm:w-fit;
+  @apply fixed top-2 sm:top-6 sm:right-6 z-50 w-[98%] sm:w-fit flex gap-2;
 }
 
 .nav-ul {
-  @apply bg-lilac rounded-full flex w-full justify-center items-center gap-3 sm:gap-4 px-3 sm:px-6 py-2 text-text shadow-xl sm:shadow-md;
+  @apply bg-lilac dark:bg-dark-lilac rounded-full flex w-full justify-center items-center gap-3 sm:gap-4 px-3 sm:px-6 py-2 text-text dark:text-dark-text shadow-xl sm:shadow-md;
 }
 
 .nav-li {
-  @apply hover:text-primary transition text-[0.8rem] sm:text-base font-medium;
+  @apply hover:text-primary dark:hover:text-dark-primary transition-colors text-[0.8rem] sm:text-base font-medium cursor-pointer;
 }
 
 .nav-li-current {
-  @apply text-primary font-semibold text-[0.8rem] sm:text-base;
+  @apply text-primary dark:text-dark-primary font-semibold text-[0.8rem] sm:text-base;
+}
+
+.theme-toggle {
+  @apply text-xl w-[44px] cursor-pointer transition-all dark:text-dark-text bg-lilac dark:bg-dark-lilac rounded-full;
+}
+
+.theme-toggle i {
+  @apply h-[24px] w-[24px] text-text dark:text-dark-text;
 }
 
 footer {
-  @apply bg-lilac mt-20 py-12 px-6 sm:px-16 text-text text-center grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm;
+  @apply bg-lilac dark:bg-dark-lilac mt-20 py-12 px-6 sm:px-16 text-text dark:text-dark-text text-center grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm;
 }
 
 footer.web-design-footer {
@@ -50,7 +81,7 @@ footer div {
 }
 
 footer i {
-  @apply text-primary text-2xl;
+  @apply text-primary dark:text-dark-primary text-2xl;
 }
 
 .title-1 {
@@ -58,19 +89,19 @@ footer i {
 }
 
 .title-2 {
-  @apply text-2xl sm:text-3xl font-semibold mb-8 border-b border-secondary pb-2;
+  @apply text-2xl sm:text-3xl font-semibold mb-8 border-b border-secondary dark:border-dark-secondary pb-2 text-text dark:text-dark-text;
 }
 
 .card {
-  @apply p-4 bg-white rounded-md shadow-soft hover:bg-lilac transition-colors flex items-center;
+  @apply p-4 bg-card-bg dark:bg-dark-card-bg rounded-md shadow-soft hover:bg-lilac dark:hover:bg-dark-lilac transition-colors flex items-center;
 }
 
 .input-label {
-  @apply font-medium block mb-1 text-sm;
+  @apply font-medium block mb-1 text-sm text-text dark:text-dark-text;
 }
 
 .input {
-  @apply w-full p-2 bg-transparent border-b-2 border-secondary focus:outline-none focus:border-primary transition-colors placeholder:text-text placeholder:opacity-60;
+  @apply w-full p-2 bg-transparent border-b-2 border-secondary dark:border-dark-secondary focus:outline-none focus:border-primary dark:focus:border-dark-primary transition-colors placeholder:text-text dark:placeholder:text-dark-text placeholder:opacity-60 text-text dark:text-dark-text;
 }
 
 .form-response-modal {
@@ -78,7 +109,7 @@ footer i {
 }
 
 .modal-content {
-  @apply w-full max-w-lg bg-white rounded-lg p-10 text-center flex flex-col gap-6;
+  @apply w-full max-w-lg bg-card-bg dark:bg-dark-card-bg rounded-lg p-10 text-center flex flex-col gap-6 text-text dark:text-dark-text;
 }
 
 .modal-content .error-icon {
@@ -90,7 +121,7 @@ footer i {
 }
 
 .modal-content h6 {
-  @apply text-text font-semibold text-lg mb-4;
+  @apply font-semibold text-lg mb-4;
 }
 
 .modal-content ul {
@@ -110,15 +141,11 @@ footer i {
 }
 
 .project-card::before {
-  @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/20 transition-all duration-300;
-}
-
-.project-card:hover::before {
-  @apply bg-black/70;
+  @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/20 dark:bg-black/40 hover:bg-black/70 dark:hover:bg-black/80 transition-all duration-300;
 }
 
 .project-card .card-content {
-  @apply absolute -bottom-6 left-0 w-full px-6 py-1 transition-all duration-300 bg-primary;
+  @apply absolute -bottom-6 left-0 w-full px-6 py-1 transition-all duration-300 bg-primary dark:bg-dark-primary;
 }
 
 .project-card:hover .card-content {
