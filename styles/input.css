@@ -61,7 +61,7 @@ nav {
 }
 
 .theme-toggle {
-  @apply text-xl w-[44px] cursor-pointer transition-all dark:text-dark-text bg-lilac dark:bg-dark-lilac rounded-full;
+  @apply text-xl w-[44px] cursor-pointer transition-all dark:text-dark-text bg-lilac dark:bg-dark-lilac rounded-full shadow-xl sm:shadow-md;
 }
 
 .theme-toggle i {
@@ -145,7 +145,7 @@ footer i {
 }
 
 .project-card .card-content {
-  @apply absolute -bottom-6 left-0 w-full px-6 py-1 transition-all duration-300 bg-primary dark:bg-dark-primary;
+  @apply absolute -bottom-6 left-0 w-full px-6 py-1 transition-all duration-300 bg-primary;
 }
 
 .project-card:hover .card-content {
@@ -251,11 +251,11 @@ footer i {
 }
 
 .submit-button {
-  @apply w-full bg-primary dark:bg-dark-primary text-white py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
+  @apply w-full bg-primary text-white py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
 }
 
 .modal-button {
-  @apply bg-primary dark:bg-dark-primary text-white px-6 py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
+  @apply bg-primary text-white px-6 py-2 rounded-md hover:bg-secondary dark:hover:bg-dark-secondary transition-colors cursor-pointer mt-2 text-sm font-medium;
 }
 
 .tasks-grid {
@@ -267,7 +267,7 @@ footer i {
 }
 
 .task-header {
-  @apply text-lg font-bold bg-primary dark:bg-dark-primary p-3 w-full text-center text-white;
+  @apply text-lg font-bold bg-primary p-3 w-full text-center text-white;
 }
 
 .task-list {
@@ -280,4 +280,16 @@ footer i {
 
 .no-tasks {
   @apply text-center text-text dark:text-dark-text;
+}
+
+.subject-card {
+  @apply border-l-4 border-primary dark:border-dark-primary;
+}
+
+.subject-icon {
+  @apply text-primary dark:text-dark-primary mr-3 text-xl;
+}
+
+.subject-link {
+  @apply text-primary dark:text-dark-primary hover:underline transition-colors cursor-pointer;
 }

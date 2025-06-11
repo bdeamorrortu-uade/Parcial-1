@@ -220,9 +220,6 @@
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
-  .mr-3 {
-    margin-right: calc(var(--spacing) * 3);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -261,9 +258,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .cursor-pointer {
-    cursor: pointer;
   }
   .resize-none {
     resize: none;
@@ -325,10 +319,6 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-  .border-l-4 {
-    border-left-style: var(--tw-border-style);
-    border-left-width: 4px;
   }
   .border-l-\[2\.5px\] {
     border-left-style: var(--tw-border-style);
@@ -405,13 +395,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-secondary);
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
       }
     }
   }
@@ -518,6 +501,11 @@
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .dark\:text-dark-primary {
+    &:where(.dark, .dark *) {
+      color: var(--color-dark-primary);
     }
   }
 }
@@ -672,9 +660,15 @@ nav {
   background-color: var(--color-lilac);
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   transition-property: all;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
+  @media (width >= 40rem) {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   &:where(.dark, .dark *) {
     background-color: var(--color-dark-lilac);
   }
@@ -988,9 +982,6 @@ footer i {
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 300ms;
   transition-duration: 300ms;
-  &:where(.dark, .dark *) {
-    background-color: var(--color-dark-primary);
-  }
 }
 .project-card:hover .card-content {
   bottom: calc(var(--spacing) * 0);
@@ -1145,9 +1136,6 @@ footer i {
     }
   }
   &:where(.dark, .dark *) {
-    background-color: var(--color-dark-primary);
-  }
-  &:where(.dark, .dark *) {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-dark-secondary);
@@ -1174,9 +1162,6 @@ footer i {
     @media (hover: hover) {
       background-color: var(--color-secondary);
     }
-  }
-  &:where(.dark, .dark *) {
-    background-color: var(--color-dark-primary);
   }
   &:where(.dark, .dark *) {
     &:hover {
@@ -1216,9 +1201,6 @@ footer i {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
-  &:where(.dark, .dark *) {
-    background-color: var(--color-dark-primary);
-  }
 }
 .task-list {
   display: flex;
@@ -1266,6 +1248,38 @@ footer i {
   color: var(--color-text);
   &:where(.dark, .dark *) {
     color: var(--color-dark-text);
+  }
+}
+.subject-card {
+  border-left-style: var(--tw-border-style);
+  border-left-width: 4px;
+  border-color: var(--color-primary);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-dark-primary);
+  }
+}
+.subject-icon {
+  margin-right: calc(var(--spacing) * 3);
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  color: var(--color-primary);
+  &:where(.dark, .dark *) {
+    color: var(--color-dark-primary);
+  }
+}
+.subject-link {
+  cursor: pointer;
+  color: var(--color-primary);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-line: underline;
+    }
+  }
+  &:where(.dark, .dark *) {
+    color: var(--color-dark-primary);
   }
 }
 @property --tw-space-y-reverse {
