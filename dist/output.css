@@ -574,6 +574,7 @@ nav {
   z-index: 50;
   display: flex;
   width: 98%;
+  flex-direction: row-reverse;
   gap: calc(var(--spacing) * 2);
   @media (width >= 40rem) {
     top: calc(var(--spacing) * 6);
@@ -583,6 +584,9 @@ nav {
   }
   @media (width >= 40rem) {
     width: fit-content;
+  }
+  @media (width >= 40rem) {
+    flex-direction: row;
   }
 }
 .nav-ul {

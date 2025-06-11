@@ -45,7 +45,7 @@ header > * {
 }
 
 nav {
-  @apply fixed top-2 sm:top-6 sm:right-6 z-50 w-[98%] sm:w-fit flex gap-2;
+  @apply fixed top-2 sm:top-6 sm:right-6 z-50 w-[98%] sm:w-fit flex flex-row-reverse sm:flex-row gap-2;
 }
 
 .nav-ul {
