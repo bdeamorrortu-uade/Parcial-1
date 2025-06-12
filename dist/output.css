@@ -688,6 +688,18 @@ nav {
     color: var(--color-dark-text);
   }
 }
+.theme-toggle .fa-moon {
+  display: inline-block;
+  &:where(.dark, .dark *) {
+    display: none;
+  }
+}
+.theme-toggle .fa-sun {
+  display: none;
+  &:where(.dark, .dark *) {
+    display: inline-block;
+  }
+}
 footer {
   margin-top: calc(var(--spacing) * 20);
   display: grid;

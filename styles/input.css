@@ -68,6 +68,14 @@ nav {
   @apply h-[24px] w-[24px] text-text dark:text-dark-text;
 }
 
+.theme-toggle .fa-moon {
+  @apply inline-block dark:hidden;
+}
+
+.theme-toggle .fa-sun {
+  @apply hidden dark:inline-block;
+}
+
 footer {
   @apply bg-lilac dark:bg-dark-lilac mt-20 py-12 px-6 sm:px-16 text-text dark:text-dark-text text-center grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm;
 }
