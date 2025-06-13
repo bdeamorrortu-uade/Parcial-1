@@ -1023,6 +1023,12 @@ footer i {
 .project-7 {
   background-image: url("../img/UVA2-4.png");
 }
+.project-8 {
+  background-image: url("../img/UVA3-1.png");
+}
+.project-9 {
+  background-image: url("../img/UVA4-1.png");
+}
 .table-container {
   overflow-x: auto;
   border-radius: var(--radius-md);
