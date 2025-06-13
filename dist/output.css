@@ -534,7 +534,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/background.jpg');
+  background-image: url('../img/background.webp');
   background-size: cover;
   background-position: center;
   color: var(--color-background);
@@ -1003,31 +1003,31 @@ footer i {
   bottom: calc(var(--spacing) * 0);
 }
 .project-1 {
-  background-image: url("../img/UVA1-1.png");
+  background-image: url("../img/UVA1-1.webp");
 }
 .project-2 {
-  background-image: url("../img/UVA1-2.png");
+  background-image: url("../img/UVA1-2.webp");
 }
 .project-3 {
-  background-image: url("../img/UVA1-3.png");
+  background-image: url("../img/UVA1-3.webp");
 }
 .project-4 {
-  background-image: url("../img/UVA2-1.png");
+  background-image: url("../img/UVA2-1.webp");
 }
 .project-5 {
-  background-image: url("../img/UVA2-2.png");
+  background-image: url("../img/UVA2-2.webp");
 }
 .project-6 {
-  background-image: url("../img/UVA2-3.png");
+  background-image: url("../img/UVA2-3.webp");
 }
 .project-7 {
-  background-image: url("../img/UVA2-4.png");
+  background-image: url("../img/UVA2-4.webp");
 }
 .project-8 {
-  background-image: url("../img/UVA3-1.png");
+  background-image: url("../img/UVA3-1.webp");
 }
 .project-9 {
-  background-image: url("../img/UVA4-1.png");
+  background-image: url("../img/UVA4-1.webp");
 }
 .table-container {
   overflow-x: auto;

@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  @apply h-[40vh] bg-[url('../img/background.jpg')] bg-cover bg-center flex flex-col items-center justify-center text-background relative;
+  @apply h-[40vh] bg-[url('../img/background.webp')] bg-cover bg-center flex flex-col items-center justify-center text-background relative;
 }
 
 header::after {
@@ -161,31 +161,31 @@ footer i {
 }
 
 .project-1 {
-  @apply bg-[url("../img/UVA1-1.png")];
+  @apply bg-[url("../img/UVA1-1.webp")];
 }
 .project-2 {
-  @apply bg-[url("../img/UVA1-2.png")];
+  @apply bg-[url("../img/UVA1-2.webp")];
 }
 .project-3 {
-  @apply bg-[url("../img/UVA1-3.png")];
+  @apply bg-[url("../img/UVA1-3.webp")];
 }
 .project-4 {
-  @apply bg-[url("../img/UVA2-1.png")];
+  @apply bg-[url("../img/UVA2-1.webp")];
 }
 .project-5 {
-  @apply bg-[url("../img/UVA2-2.png")];
+  @apply bg-[url("../img/UVA2-2.webp")];
 }
 .project-6 {
-  @apply bg-[url("../img/UVA2-3.png")];
+  @apply bg-[url("../img/UVA2-3.webp")];
 }
 .project-7 {
-  @apply bg-[url("../img/UVA2-4.png")];
+  @apply bg-[url("../img/UVA2-4.webp")];
 }
 .project-8 {
-  @apply bg-[url("../img/UVA3-1.png")];
+  @apply bg-[url("../img/UVA3-1.webp")];
 }
 .project-9 {
-  @apply bg-[url("../img/UVA4-1.png")];
+  @apply bg-[url("../img/UVA4-1.webp")];
 }
 
 .table-container {
