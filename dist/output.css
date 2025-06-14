@@ -226,9 +226,6 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
   }
@@ -237,9 +234,6 @@
   }
   .hidden {
     display: none;
-  }
-  .inline-block {
-    display: inline-block;
   }
   .table {
     display: table;
@@ -360,10 +354,6 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -937,11 +927,14 @@ footer i {
 }
 .project-card {
   position: relative;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background-size: cover;
   background-position: center;
+  @media (width >= 40rem) {
+    height: 200px;
+  }
 }
 .project-card::before {
   position: absolute;
@@ -987,20 +980,48 @@ footer i {
 }
 .project-card .card-content {
   position: absolute;
-  bottom: calc(var(--spacing) * -6);
+  bottom: calc(var(--spacing) * 0);
   left: calc(var(--spacing) * 0);
   width: 100%;
   background-color: var(--color-primary);
   padding-inline: calc(var(--spacing) * 6);
-  padding-block: calc(var(--spacing) * 1);
+  padding-block: calc(var(--spacing) * 2);
   transition-property: all;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 300ms;
   transition-duration: 300ms;
+  @media (width >= 40rem) {
+    bottom: calc(var(--spacing) * -12);
+  }
 }
 .project-card:hover .card-content {
   bottom: calc(var(--spacing) * 0);
+}
+.project-links {
+  margin-block: calc(var(--spacing) * 2);
+  display: flex;
+  gap: calc(var(--spacing) * 4);
+}
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+  border-radius: var(--radius-md);
+  background-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+  padding: calc(var(--spacing) * 1.5);
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+}
+.project-link i {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
 }
 .project-1 {
   background-image: url("../img/UVA1-1.webp");

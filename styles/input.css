@@ -145,7 +145,7 @@ footer i {
 }
 
 .project-card {
-  @apply relative overflow-hidden rounded-lg h-[200px] bg-cover bg-center;
+  @apply relative overflow-hidden rounded-lg h-[220px] sm:h-[200px] bg-cover bg-center;
 }
 
 .project-card::before {
@@ -153,11 +153,23 @@ footer i {
 }
 
 .project-card .card-content {
-  @apply absolute -bottom-6 left-0 w-full px-6 py-1 transition-all duration-300 bg-primary;
+  @apply absolute bottom-0 sm:-bottom-12 left-0 w-full px-6 py-2 transition-all duration-300 bg-primary;
 }
 
 .project-card:hover .card-content {
   @apply bottom-0;
+}
+
+.project-links {
+  @apply flex gap-4 my-2;
+}
+
+.project-link {
+  @apply flex items-center gap-2 text-white bg-white/10 rounded-md text-xs font-medium p-1.5;
+}
+
+.project-link i {
+  @apply text-sm;
 }
 
 .project-1 {
